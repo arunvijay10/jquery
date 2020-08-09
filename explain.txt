@@ -1,0 +1,11 @@
+This is a jquery functions where we are going to use so many functions .
+1. Download Jquery from Jquery site or Just go to jquery cdn 
+---->
+https://code.jquery.com/
+----> click on slim minified
+Copy the script
+<script
+			  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+			  crossorigin="anonymous"></script>
+		
