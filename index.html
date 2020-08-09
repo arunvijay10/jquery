@@ -7,6 +7,8 @@
 </head>
 <body>
     <button id="clickme">Hello</button>
+    <hr>
+    <button id="btn">Mouse Over</button>
    
    <script
    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -18,7 +20,14 @@
             $("#clickme").click(function(){
                 alert("Welcome to Jquery World")
             })
+
+            $("#btn").mouseover(function()
+            {
+                $(this).css({"background":"red"})
+            })
+        
         })
+
     </script>
 </body>
 </html>
