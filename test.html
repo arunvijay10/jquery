@@ -35,6 +35,19 @@
     <h1 id="test">  Hiding this Text in a way By clicking the button</h1>
     <button id="Sh" style="background-color: yellowgreen;">Showing</button>
     <button id="hd" style="background-color: yellowgreen;">Hiding</button>
+    <br>
+    <div class="main">
+    <button class="hep"> just </button>
+        <div id="bx1" style="background-color: yellowgreen; height: 197px;
+        width: 197px;display: none;"></div>
+        <div id="bx2" style="background-color: red; height: 197px;
+        width: 197px; display: none;"></div>
+        <div id="bx3" style="background-color: pink; height: 197px;
+        width: 197px; display:none;"></div>
+    </div>
+    <p>Lets Slide Down With the example</p>
+       
+    
 
 
 
@@ -86,7 +99,15 @@
             $("#hd").click(function(){
                 $("#test").hide()
                 
-            })
+            });
+            $(".hep").click(function(){
+                $("#bx1").fadeIn()
+            });
+
+
+
+
+
 
 
         })
