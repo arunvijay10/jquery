@@ -30,7 +30,11 @@
     <button id="focusing">Focus Me</button>
     <br>
     <h1 id="magic">This is Real Magic When You Click Hover And Double Click This Text</h1>
-
+    <br>
+    <h1 id="new">Hiding In A New Style</h1>
+    <h1 id="test">  Hiding this Text in a way By clicking the button</h1>
+    <button id="Sh" style="background-color: yellowgreen;">Showing</button>
+    <button id="hd" style="background-color: yellowgreen;">Hiding</button>
 
 
 
@@ -72,6 +76,18 @@
             }
             
             })
+            $("#new").mouseover(function(){
+                $(this).hide(1000)
+            })
+            $("#sh").click(function(){
+                $("#test").show()
+                
+            })
+            $("#hd").click(function(){
+                $("#test").hide()
+                
+            })
+
 
         })
 
