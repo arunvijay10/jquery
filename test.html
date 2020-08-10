@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            background-image: url("/home/user/Desktop/jquery/jquery/images/sea.jpg");
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            /* display: flex; */
+            background-attachment: fixed;
+        }
+    </style>
 </head>
+
 <body>
     <button id="text">Click me</button>
     <button id="hides">Hide</button>
     <p class="hiding">Please Put Mouse over the text and Click <br></p>
     <p class="hiding">The text Will Hide<br></p>
     <p id="down">mouse down over the text</p><br>
-    <p id="hover" >Mouse Hover to Change The color</p>
-
+    <p id="hover">Mouse Hover to Change The color</p>
+    <button id="focusing">Focus Me</button>
+    <br>
+    <h1 id="magic">This is Real Magic When You Click Hover And Double Click This Text</h1>
 
 
 
 
     <script>
-        $(document).ready(function(){
-            $("#text").click(function(){
+        $(document).ready(function () {
+            $("#text").click(function () {
                 alert("this is a text")
             })
 
-            $("#hides").click(function(){
-                $(this).hide()
-            })
-            
-            $(".hiding").click(function(){
+            $("#hides").click(function () {
                 $(this).hide()
             })
 
-            $("#down").mousedown(function(){
+            $(".hiding").click(function () {
+                $(this).hide()
+            })
+
+            $("#down").mousedown(function () {
                 alert("You are Doing Mouse Down")
             })
 
-            $("#hover").hover(function(){
-                $(this).css({"color":"red"})
+            $("#hover").hover(function () {
+                $(this).css({ "color": "red" })
+            })
+
+            $("#focusing").focus(function () {
+                $(this).css({ "background": "pink" })
+            })
+
+            $("#magic").on({mouseenter : function(){
+                $(this).css("background-color", "green");
+            },
+            mousedown : function(){
+                $(this).css("background-color", "orange");
+
+            },
+            click : function(){
+                $(this).css({"background":"yellow"})
+            }
+            
             })
 
         })
 
     </script>
 
-   
+
 
 </body>
+
 </html>
