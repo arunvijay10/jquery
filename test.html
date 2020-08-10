@@ -17,6 +17,23 @@
             /* display: flex; */
             background-attachment: fixed;
         }
+
+        #content {
+            padding: -1px;
+            width: 100%;
+            background-color: red;
+            height: 65px;
+            text-align: center;
+            padding-top: 41px;
+            color: palegoldenrod;
+            font-size: 48px;
+
+        }
+        #dua
+        {
+            display: none;
+            background-color: red;
+        }
     </style>
 </head>
 
@@ -32,12 +49,12 @@
     <h1 id="magic">This is Real Magic When You Click Hover And Double Click This Text</h1>
     <br>
     <h1 id="new">Hiding In A New Style</h1>
-    <h1 id="test">  Hiding this Text in a way By clicking the button</h1>
+    <h1 id="test"> Hiding this Text in a way By clicking the button</h1>
     <button id="Sh" style="background-color: yellowgreen;">Showing</button>
     <button id="hd" style="background-color: yellowgreen;">Hiding</button>
     <br>
     <div class="main">
-    <button class="hep"> just </button>
+        <button class="hep"> just </button>
         <div id="bx1" style="background-color: yellowgreen; height: 197px;
         width: 197px;display: none;"></div>
         <div id="bx2" style="background-color: red; height: 197px;
@@ -45,9 +62,14 @@
         <div id="bx3" style="background-color: pink; height: 197px;
         width: 197px; display:none;"></div>
     </div>
-    <p>Lets Slide Down With the example</p>
-       
-    
+    <br>
+
+    <div id="content">
+        Hey click me
+    </div>
+    <div id="dua">You Will Be Blessed By The God One day.</div>
+
+
 
 
 
@@ -55,6 +77,10 @@
         $(document).ready(function () {
             $("#text").click(function () {
                 alert("this is a text")
+            })
+
+            $("#content").mouseleave(function(){
+                $("#dua").show("slow")
             })
 
             $("#hides").click(function () {
@@ -77,30 +103,31 @@
                 $(this).css({ "background": "pink" })
             })
 
-            $("#magic").on({mouseenter : function(){
-                $(this).css("background-color", "green");
-            },
-            mousedown : function(){
-                $(this).css("background-color", "orange");
+            $("#magic").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "green");
+                },
+                mousedown: function () {
+                    $(this).css("background-color", "orange");
 
-            },
-            click : function(){
-                $(this).css({"background":"yellow"})
-            }
-            
+                },
+                click: function () {
+                    $(this).css({ "background": "yellow" })
+                }
+
             })
-            $("#new").mouseover(function(){
+            $("#new").mouseover(function () {
                 $(this).hide(1000)
             })
-            $("#Sh").click(function(){
+            $("#Sh").click(function () {
                 $("#test").show()
-                
+
             })
-            $("#hd").click(function(){
+            $("#hd").click(function () {
                 $("#test").hide()
-                
+
             });
-            $(".hep").click(function(){
+            $(".hep").click(function () {
                 $("#bx1").fadeIn()
             });
 
