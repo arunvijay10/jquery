@@ -20,9 +20,15 @@
     <h1 style="color: lawngreen;color: lawngreen; margin-left: 561px; margin-top: 84px;">Animate</h1>
     <button id="shiv">Animation</button>
     <div id="bhole" style="background:lightcoral;height:100px;width:100px;position:absolute;"></div>
+<br>
 
+    <button id="work" style="margin-left:174px;">Animation2</button>
+    <div id="flow" style="background:orange;height:100px;width:100px;position:absolute;"></div>
 
-
+    <br>
+    
+    <div id="Get" style="background:indigo;height:100px;width:100px;position:absolute;">click here</div>
+    <div id="Ready" style="background:white;height:100px;width:100px;display: none;"></div>
 
 
 
@@ -41,7 +47,12 @@
             $("#shiv").click(function(){
                 $("#bhole").animate({left:'1055px'});
             });
-           
+           $("#work").click(function(){
+               $("#flow").animate({left:'855px',height:"555px" ,opacity:"0.5px"});
+           });
+           $("#Get").click(function(){
+               $("#Ready").stop()
+           })
         })
 
     </script>
