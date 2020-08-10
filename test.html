@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="text">Click me</button>
+    <button id="hides">Hide</button>
+    <p class="hiding">Please Put Mouse over the text and Click <br></p>
+    <p class="hiding">The text Will Hide<br></p>
+    <p id="down">mouse down over the text</p><br>
+    <p id="hover" >Mouse Hover to Change The color</p>
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("#text").click(function(){
+                alert("this is a text")
+            })
+
+            $("#hides").click(function(){
+                $(this).hide()
+            })
+            
+            $(".hiding").click(function(){
+                $(this).hide()
+            })
+
+            $("#down").mousedown(function(){
+                alert("You are Doing Mouse Down")
+            })
+
+            $("#hover").hover(function(){
+                $(this).css({"color":"red"})
+            })
+
+        })
+
+    </script>
+
+   
+
+</body>
+</html>
