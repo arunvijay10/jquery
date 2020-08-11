@@ -34,12 +34,36 @@
             height: 100px;
             width: 100%;
             display: none;
-            background-color:yellow;
+            background-color: yellow;
         }
-        .toggling{
+
+        .toggling {
             width: 100%;
-            height:45px;
+            height: 45px;
             background-color: tomato;
+        }
+
+        .sli {
+            width: 100%;
+            height: 99px;
+            background-color: black;
+            color: crimson;
+        }
+
+        .shme {
+            width: 100%;
+            height: 99px;
+            background-color: black;
+            color: paleturquoise;
+            display: none;
+        }
+
+        #shme {
+            width: 100%;
+            height: 99px;
+            background-color: black;
+            color: paleturquoise;
+            display: none;
         }
     </style>
 </head>
@@ -71,17 +95,18 @@
     </div>
     <br>
 
-    <div id="content">
-        Hey click me
-    </div>
+    <div id="content">Hey click me</div>
     <div id="dua">You Will Be Blessed By The God One day.</div>
     <br>
     <button id="tog">Toogle</button>
     <div class="toggling">This box Will Toggle</div>
-
-
-
-
+    <br>
+    <div class="sli">Click Me</div>
+    <div class="shme">This will slide down by clicking</div>
+    <div class="#shme">This will slide down by clicking</div>
+    <br>
+    <h1 id="up">This Is Awesome effect By</h1>
+    <button id="eff">Awesome Effect</button>
 
     <script>
         $(document).ready(function () {
@@ -89,6 +114,15 @@
                 alert("this is a text")
             })
 
+            $("#eff").click(function(){
+                $("#up").css('color','red').slideUp(4000).slideDown(4000);
+            })
+            $(".sli").click(function () {
+                $(".shme").slideDown(2000)
+            })
+            $(".sli").click(function () {
+                $("#shme").slideUp()
+            })
             $("#content").mouseenter(function () {
                 $("#dua").slideDown("slow")
             })
@@ -141,7 +175,7 @@
                 $("#bx1").fadeIn()
             });
 
-            $("#tog").click(function(){
+            $("#tog").click(function () {
                 $(".toggling").toggle(3000)
             })
 
