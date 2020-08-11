@@ -10,20 +10,43 @@
 </head>
 
 <body>
-
+    <h1 style="text-decoration: none;background-color: papayawhip; text-align: center;">Go To Test <a
+            href="test.html">Test</a><br> Go To Main<a href="index.html">Main</a></h1>
     <h1 style="height: 400px; width: 100%; text-align: center; color:palevioletred">
         This is to see the value </h1>
-    <input id="test1" type="text">
-    <button id="btn">Show text</button>
 
+    <input id="test1" type="text">
+    <button id="btn">Show text</button><br>
+
+    <p id="p1">
+        Click the button the text will be changed
+    </p>
+    <p id="p2">
+        Click the button the text Font will be changed into bold
+    </p>
+    <p id="p3">
+        Click the button the value will be changed<input id="change" type="text" value="Arun Vijay">
+    </p>
+    <button id="p11">p1</button>
+    <button id="p22">p2</button>
+    <button id="p33">p3</button>
 
     <script>
-        $(document).ready(function(){
-            $("#test1").click(function(){
-                $(this).css({"color":"red"})
+        $(document).ready(function () {
+            $("#test1").click(function () {
+                $(this).css({ "color": "red" })
             })
-            $("#btn").click(function(){
-                alert("Value: "+$("#test1").val());
+            $("#btn").click(function () {
+                alert("Value: " + $("#test1").val());
+            })
+            $("#p11").click(function(){
+                $("#p1").text("Hello You are  Welcome ")
+            })
+            $("#p22").click(function(){
+                $("#p2").html("<b>How Can We Help You ?</b>")
+            })
+            $("#p33").click(function(){
+                $("#change").val("Your Name is ? ")
             })
 
         })
