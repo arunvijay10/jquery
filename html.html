@@ -30,7 +30,8 @@
     <button id="p11">p1</button>
     <button id="p22">p2</button>
     <button id="p33">p3</button>
-
+    <p id="p4">Add More text<button id="btn44">add</button></p><br>
+    <p id="p5">Add More text<button id="btn55">add</button></p>
     <script>
         $(document).ready(function () {
             $("#test1").click(function () {
@@ -48,6 +49,13 @@
             $("#p33").click(function(){
                 $("#change").val("Your Name is ? ")
             })
+            $("#btn44").click(function(){
+                $("#p4").append("You have added More Text");
+            })
+            $("#btn55").click(function(){
+                $("#p5").prepend("You have added More Text");
+            })
+
 
         })
     </script>
