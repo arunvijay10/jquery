@@ -13,3 +13,10 @@ Copy the script
     A $ sign to define/access jQuery
     A (selector) to "query (or find)" HTML elements
     A jQuery action() to be performed on the element(s)
+
+
+
+    text() - Sets or returns the text content of selected elements
+    html() - Sets or returns the content of selected elements (including HTML markup)
+    val() - Sets or returns the value of form fields
+

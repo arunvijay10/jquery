@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -14,10 +14,19 @@
     <h1 style="height: 400px; width: 100%; text-align: center; color:palevioletred">
         This is to see the value </h1>
     <input id="test1" type="text">
+    <button id="btn">Show text</button>
 
-    
+
     <script>
+        $(document).ready(function(){
+            $("#test1").click(function(){
+                $(this).css({"color":"red"})
+            })
+            $("#btn").click(function(){
+                alert("Value: "+$("#test1").val());
+            })
 
+        })
     </script>
 </body>
 
